@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "PreToolCall": [
+      {
+        "matcher": ".*",
+        "command": "$HOME/.boostdev/hooks/pre-command.sh"
+      }
+    ],
+    "PostToolCall": [
+      {
+        "matcher": ".*",
+        "command": "$HOME/.boostdev/hooks/anti-loop.sh"
+      },
+      {
+        "matcher": ".*",
+        "command": "$HOME/.boostdev/hooks/token-tracker.sh"
+      }
+    ],
+    "SessionStart": [
+      {
+        "command": "$HOME/.boostdev/memory/load-context.sh load"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "command": "$HOME/.boostdev/memory/save-context.sh"
+      }
+    ]
+  }
+}

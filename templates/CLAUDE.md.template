@@ -1,0 +1,35 @@
+# Project Guidelines
+
+## BoostDev Integration
+
+This project uses [BoostDev](https://github.com/Lockedindev0/boostdev) for Claude Code optimization.
+
+### Active Protections
+- **Anti-Loop**: Automatic loop detection after 3 repeated failures
+- **Session Memory**: Context is saved/loaded automatically between sessions
+- **Token Tracking**: All tool calls are logged for usage analysis
+
+### When You Get a BoostDev Warning
+If you see a `[BoostDev] Loop Detected!` message:
+1. STOP what you are doing immediately
+2. Analyze WHY the previous approach failed
+3. Consider a completely different strategy
+4. If stuck, ask the user for guidance
+
+### Session Memory
+Previous session context is loaded at startup. Use this context to:
+- Continue work without re-explaining architecture
+- Avoid repeating decisions already made
+- Reference previous errors and their solutions
+
+## Project Architecture
+
+<!-- Add your project-specific architecture notes below -->
+
+## Coding Standards
+
+<!-- Add your project-specific coding standards below -->
+
+## Common Pitfalls
+
+<!-- Add known issues and pitfalls below -->
